@@ -12,6 +12,15 @@ model_proto = onnx.load("path to .onnx file")
 checker.check_model(model_proto)
 ```
 
+### Contribute a Gradio Demo to ONNX Organization on Hugging Face
+
+* Create an account on Hugging Face: https://huggingface.co/join
+* See list of models left to add to ONNX organization, please refer to the table with the [Models list](https://github.com/onnx/models#models)
+* Add Gradio Demo under your username, see blog for setting up Gradio Demo on Hugging Face: https://huggingface.co/blog/gradio-spaces
+* Request to join ONNX Organization: https://huggingface.co/onnx
+* Once approved transfer model from your username to ONNX organization
+* Add a badge for model in model table, see examples in [Models list](https://github.com/onnx/models#models)
+
 ## Model
 
 |Model        |Download  | Download (with sample test data)|ONNX version|Opset version|Accuracy |
@@ -118,6 +127,9 @@ ort_test_dir_utils.create_test_dir(model_path, 'temp/examples', 'test2', name_in
 https://github.com/microsoft/onnxruntime/blob/master/tools/python/PythonTools.md
 
 <hr>
+
+### Update ONNX_HUB_MANIFEST.json for ONNX Hub
+If this PR does update/add .onnx or .tar.gz files, please use `python workflow_scripts/generate_onnx_hub_manifest.py --target diff` to update ONNX_HUB_MANIFEST.json with according model information (especially SHA) for ONNX Hub.
 
 ### References
 Link to paper or references.
